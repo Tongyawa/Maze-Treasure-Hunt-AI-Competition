@@ -1,0 +1,148 @@
+我的企鹅基本信息
+企鹅常用的基本信息
+首先我们看看一个企鹅 Player 有哪些常用的基本信息。
+
+id : 企鹅的唯一标识符
+
+row : 企鹅所在的行
+
+col : 企鹅所在的列
+
+energy : 企鹅的剩余体力
+
+direction : 企鹅的朝向
+
+score : 企鹅的分数
+
+finished: 企鹅是否已经到达终点
+
+item_count: 企鹅收集到的物品数量
+
+order: 在一局比赛中，与其他玩家相比的执行顺序
+
+exit: 终点信息 Exit
+
+获取我的企鹅信息
+只需要调用 api 的 get 中 my() 函数，配上要在 my(what) 中传入的参数即拿到了 what 选定的数据。 下面是一个例子：
+
+import api
+
+# 拿到我的企鹅 row 信息
+my_row = api.get.my(what="row")
+
+# 打印出我的企鹅所在的行
+print(my_row)
+log 输出：
+
+1
+再结合地图看一个更全的例子。假设使用这张地图，地图中的行列是从 0 开始的，那么上面的代码将打印出我的企鹅所在的行。
+
+我的企鹅信息
+地图行列索引
+row 0, col 0
+
+row 0, col 1
+
+row 0, col 2
+
+row 0, col 3
+
+row 0, col 4
+
+row 1, col 0
+
+row 1, col 1
+
+row 1, col 2
+
+row 1, col 3
+
+row 1, col 4
+
+row 2, col 0
+
+row 2, col 1
+
+row 2, col 2
+
+row 2, col 3
+
+row 2, col 4
+
+row 3, col 0
+
+row 3, col 1
+
+row 3, col 2
+
+row 3, col 3
+
+row 3, col 4
+
+row 4, col 0
+
+row 4, col 1
+
+row 4, col 2
+
+row 4, col 3
+
+row 4, col 4
+
+对照着图片和这张表格，如果红色企鹅是我的话，下面这段代码将打印出我的行 row=1, 列 col=1。
+
+import api
+
+# 拿到我的企鹅 row 信息
+my_row = api.get.my(what="row")
+my_col = api.get.my(what="col")
+print("my_row=", my_row)
+print("my_col=", my_col)
+log 输出：
+
+my_row=1
+my_col=1
+其他的信息，也可以通过传入不同的 what 参数来获取。比如获取我的 ID 和 体力 信息：
+
+import api
+
+# 拿到我的企鹅 id 信息
+my_id = api.get.my(what="id")
+
+# 拿到我的企鹅 体力 信息
+my_energy = api.get.my(what="energy")
+
+# 打印出我的企鹅 id 和 energy 信息
+print("my_id=", my_id)
+print("my_energy=", my_energy)
+log 输出：
+
+my_id=0
+my_energy=100
+提示
+
+除此之外，还可以用上下文 context 来拿到企鹅信息，从 context 中获取数据
+
+
+出口的数据
+在每局比赛中，除了收集更多的宝石，也最好要能在足够体力下，坚持走到自己的终点。因为到终点会有额外的加分。这对于对战中，是一个不可或缺的加分项。
+
+
+在这个图中，因为有两个企鹅，所以有两个 终点旗帜，企鹅颜色对应着出口的颜色。比如当你操控的是 红企鹅 时，你需要走到 红色的旗帜终点 处。 每局比赛中，总会有你的终点。所以你最好需要时刻关注你的体力，当快要用完时可以开始走向终点。 在这篇文档中也介绍了走到终点的代码策略 安全离场策略。
+
+调用 exit() 函数， 你需要传入 what 参数，来选择获取终点的行还是列坐标。我们举个例子。
+
+# 获取终点的行坐标
+exit_row = api.get.exit(what='row')
+# 获取终点的列坐标
+exit_col = api.get.exit(what='col')
+
+print(exit_row, exit_col)
+你可以看到 log 返回中，会分别返回终点的行坐标和列坐标。
+
+0 5
+提示
+
+除此之外，还可以用上下文 context 来拿到出口信息，从 context 中获取数据
+
+
