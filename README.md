@@ -1,5 +1,7 @@
 苯人于2024年8月参加的全国青少年信息素养大赛-迷宫寻宝AI竞技赛获全国二等奖的代码，现作归档。
 此为最终参加比赛时的code folder，含历史版本、测试代码、废稿等杂项，代码main文件为“v2.3(优化Exit).py”
+大赛平台：https://ai-arena.qq.com/ceickpcb2024/
+赛事信息：https://ceic.kpcb.org.cn/comp/enrollMatch/58
 
 ---
 ## 算法主要思路：（贪心算法、有限步长内的全局最优搜索）
