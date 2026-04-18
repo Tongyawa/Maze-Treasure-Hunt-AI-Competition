@@ -13,6 +13,7 @@
 </p>
 
 <br>
+
 ## 📌 赛事概览
 - **大赛平台：**[腾讯 AI 竞技场 (ceickpcb2024)](https://ai-arena.qq.com/ceickpcb2024/)
 - **赛事信息：** [官方赛事页面](https://ceic.kpcb.org.cn/comp/enrollMatch/58)
@@ -96,6 +97,11 @@ https://github.com/user-attachments/assets/09ee775f-fd30-4595-89f9-59b92b1a8309
 ## 创作声明
 
 参赛代码仅使用代码自动补全，未使用Vibe Coding；纯原创，于高中学校课余时间在草稿纸上完成初期算法建模。
+
+## 获奖证书
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/4ffa20a7-f7f1-4f64-b472-a3c8cd350c6d" />
+
 
 <br>
 
